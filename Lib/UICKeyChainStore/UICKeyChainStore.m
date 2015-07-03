@@ -528,7 +528,7 @@ static NSString *_defaultService;
     query[(__bridge __strong id)kSecAttrAccount] = key;
 #if TARGET_OS_IPHONE
     if (floor(NSFoundationVersionNumber) > floor(1047.25)) { // iOS 8+
-        query[(__bridge __strong id)kSecUseNoAuthenticationUI] = (__bridge id)kCFBooleanTrue;
+        query[(__bridge __strong id)kSecUseAuthenticationUI] = (__bridge id)kCFBooleanTrue;
     }
 #endif
     
